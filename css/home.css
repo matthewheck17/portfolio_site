@@ -1,6 +1,7 @@
 * {
     font-family: "Andale Mono",AndaleMono,monospace;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 .site-section {
@@ -63,11 +64,11 @@
     color: #9b9b9b;
     text-decoration: none;
 }
-  
+
 #menu li:hover {
     background-color: #111111;
 }
-   
+
 /* LEAD SECTION */
 
 #lead-content {
@@ -113,10 +114,6 @@
     width: 60%;
 }
 
-#about-content h2 {
-    font-size: 36px;
-}
-
 #about-text {
     width: 60%;
     color: #9b9b9b;
@@ -155,27 +152,91 @@
 }
 
 /* EXPERIENCE SECTION */
-#experience {
-    background: #202020;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
 
 #experience-content {
     position: absolute;
-    text-align: center;
+    display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-}
-
-#experience-content h2 {
-    font-size: 36px;
+    width: 60%;
+    color: #9b9b9b;
 }
 
 #experience > .section-heading {
     background-image: linear-gradient(135deg, black 65%, transparent 50px), linear-gradient(-45deg, #FED8B1 25%, transparent 50px);
+}
+
+#experience-content ul {
+    padding: 0;
+}
+
+.job-li {
+    display: block;
+    padding: 17px;
+    font-size: 14px;
+    border-left: solid 2px #008080;
+    transition: .5s all ease;
+}
+
+.job-li.selected {
+    color: #FFF;
+    border-left: solid 2px #BBFFFF;
+    transition: .5s all ease;
+}
+
+#job-selectors {
+    width: 30%;
+}
+
+#mobile-break {
+    display: none;
+}
+
+#job-content {
+    width: 70%;
+}
+
+#job-content div {
+    display: none;
+}
+
+#job-content .selected {
+    display: unset;
+}
+
+.job-company {
+    color: #004545;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.job-title {
+    color: #FFFFFF;
+    font-size: 26px;
+}
+
+.job-at {
+    color: #FED8B1;
+}
+
+.time-range {
+    font-size: 14px;
+    color: #BBFFFF;
+    padding-bottom: 20px;
+}
+
+#job-content ul li {
+    display: block;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+
+#resume-button{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 /* MEDIA QUERIES */
@@ -192,9 +253,13 @@
     #about-text a {
         font-size: 16px;
     }
-  }
+}
 
 @media screen and (max-width: 700px) {
+    #about-content {
+        width: 80%;
+    }
+
     #about-text h3 {
         font-size: 20px;
     }
@@ -210,4 +275,21 @@
     #menu {
         display: none;
     }
-  }
+
+    #experience-content {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 475px) {
+
+    .section-heading {
+        font-size: 28px;
+        color: #9b9b9b
+    }
+
+    #mobile-break {
+        display: unset;
+    }
+
+}
