@@ -179,7 +179,7 @@
     transition: .5s all ease;
 }
 
-.job-li.selected {
+.job-li.jselected {
     color: #FFF;
     border-left: solid 2px #BBFFFF;
     transition: .5s all ease;
@@ -201,7 +201,7 @@
     display: none;
 }
 
-#job-content .selected {
+#job-content .jselected {
     display: unset;
 }
 
@@ -238,6 +238,77 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+/* EDUCATION SECTION */
+
+#education > .section-heading {
+    background-image: linear-gradient(135deg, black 60%, transparent 50px), linear-gradient(-45deg, #FED8B1 30%, transparent 50px);
+}
+
+#education-content {
+    position: absolute;
+    display: block;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    color: #9b9b9b;
+}
+
+#education-selectors {
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-bottom: 30px;
+    text-align: center;
+    width: 60%;
+}
+
+#education-selectors ul {
+    width: 100%;
+    padding: 0;
+}
+
+.edu-li {
+    display: inline-block;
+    padding: 17px 0;
+    font-size: 14px;
+    color: #9b9b9b;
+    border-bottom: solid 2px #008080;
+    transition: .5s all ease;
+    width: 40%;
+}
+
+.edu-li.eselected {
+    color: #FFF;
+    border-bottom: solid 2px #BBFFFF;
+    transition: .5s all ease;
+}
+
+#school-content div{
+    display: none;
+}
+
+#school-content .eselected {
+    display: unset;
+}
+
+#courses-title {
+    color: #FED8B1;
+}
+
+.time-range-edu {
+    font-size: 14px;
+    color: #004545;
+    padding-bottom: 20px;
+}
+
+.gpa {
+    color: #BBFFFF;
+}
+
+
 
 /* MEDIA QUERIES */
 
@@ -278,6 +349,14 @@
 
     #experience-content {
         width: 95%;
+    }
+
+    #education-selectors {
+        width: 85%;
+    }
+
+    #education-content {
+        width: 85%;
     }
 }
 

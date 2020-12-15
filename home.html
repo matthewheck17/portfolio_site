@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>Document</title>
     <link rel="stylesheet" href="./css/home.css">
 </head>
@@ -39,7 +40,7 @@
                 </ul>
             </header>
             <!-- End header -->
-    
+
             <div id="lead-content">
                 <h2 id="name-header">Matthew Heck</h2>
                 <h2 id="title-header">Software Developer</h2>
@@ -70,7 +71,7 @@
             <div id="experience-content">
                 <div id="job-selectors">
                     <ul>
-                        <li id="job1" class="job-li selected">Journey Websites</li>
+                        <li id="job1" class="job-li jselected">Journey Websites</li>
                         <li id="job2" class="job-li">Parkview Hospital</li>
                         <li id="job3" class="job-li">IWU CIS Division</li>
                         <li id="job4" class="job-li">IT Xpress</li>
@@ -80,13 +81,13 @@
                 </div>
                 <!-- End #job-selectors -->
                 <div id="job-content">
-                    <div class="job1 selected">
+                    <div class="job1 jselected">
                         <h3 class="job-title">Full Stack Developer Intern</h3>
                         <p class="job-location"><span class="job-at">@ </span>Journey Websites</p>
                         <p class="time-range"><br>05/2020 - 08/2020</p>
                         <ul>
                             <li>Used JavaScript, PHP, HTML, and CSS to recreate a WordPress web site</li>
-                            <li>Collaborated with a team of developers</li>                     
+                            <li>Collaborated with a team of developers</li>
                             <li>Attended client meetings</li>
                         </ul>
                     </div>
@@ -96,7 +97,7 @@
                         <p class="time-range"><br>05/2019 - 08/2019</p>
                         <ul>
                             <li>Used JavaScript, HTML, and CSS to create a web app to display and edit .pson files</li>
-                            <li>Wrote Visual Basic scripts to make repeated Excel tasks faster and easier</li>                     
+                            <li>Wrote Visual Basic scripts to make repeated Excel tasks faster and easier</li>
                         </ul>
                     </div>
                     <div class="job3">
@@ -105,7 +106,7 @@
                         <p class="time-range"><br>08/2019 - Present</p>
                         <ul>
                             <li>Attend weekly tutoring sessions for underclassmen</li>
-                            <li>Grade programming assignments</li>                     
+                            <li>Grade programming assignments</li>
                         </ul>
                     </div>
                     <div class="job4">
@@ -114,8 +115,8 @@
                         <p class="time-range"><br>01/2018 - Present</p>
                         <ul>
                             <li>Help customers with various computer issues</li>
-                            <li>Communicate with customers about their repair</li>     
-                            <li>Replace and upgrade computer components</li>                  
+                            <li>Communicate with customers about their repair</li>
+                            <li>Replace and upgrade computer components</li>
                         </ul>
                     </div>
                     <div class="job5">
@@ -123,7 +124,7 @@
                         <p class="job-location"><span class="job-at">@ </span>Heck Bros. Landscaping</p>
                         <p class="time-range"><br>06/2013 - Present</p>
                         <ul>
-                            <li>Help customers with a variety of landscaping services</li>                     
+                            <li>Help customers with a variety of landscaping services</li>
                         </ul>
                     </div>
                 </div>
@@ -133,5 +134,39 @@
             <a href="#" id= "resume-button" class="btn-rounded-blue">Download Résumé</a>
         </div>
         <!-- End #experience -->
+
+        <div id="education" class="site-section">
+            <h2 class="section-heading"><span>.03 </span>EDUCATION</h2>
+            <div id="education-selectors">
+                <ul>
+                    <li id="edu1" class="edu-li eselected">College</li>
+                    <li id="edu2" class="edu-li">High School</li>
+                </ul>
+                <script src="./js/eduSelectors.js"></script>
+            </div>
+            <!-- End #education-selectors -->
+            <div id="education-content">
+                <div id="school-content">
+                    <div class="edu1 eselected">
+                        <h3 class="job-title">Computer Science Major</h3>
+                        <p class="job-location"><span class="job-at">@ </span>Indiana Wesleyan University</p>
+                        <p class="time-range-edu"><br>08/2017 - 05/2021</p>
+                        <p class="gpa">GPA: 3.87 (3.93 in-major)</p><br>
+                        <p id="courses-title">Related Coursework:</p>
+                        <p>Data Structures, Object-Oriented Programming, Calculus, Discrete Mathematics, Systems Analysis and Design, Programming Languages, Operating Systems, Intro to Software Engineering, Computer Network Fundamentals, Database Programming, Internet Programming, Software Testing, Analysis of Algorithms, Advanced Internet Concepts, Senior Project I & II</p>
+                    </div>
+                    <div class="edu2">
+                        <h3 class="job-title">Student</h3>
+                        <p class="job-location"><span class="job-at">@ </span>Leo Jr./Sr. High School</p>
+                        <p class="time-range-edu"><br>08/2013 - 06/2017</p>
+                        <p class="gpa">GPA: 4.0</p><br>
+                        <p>Academic Honors Diploma</p>
+                    </div>
+                </div>
+                <!-- End #school-content -->
+            </div>
+            <!-- End #education-content -->
+        </div>
+        <!-- End #education -->
 </body>
 </html>
