@@ -4,39 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Document</title>
+    <title>Matthew Heck - Portfolio</title>
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="./css/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./js/fade.js"></script>
 </head>
 <body>
     <body>
-        <!--
-        <div id="mobile-menu-open" class="shadow-large">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-        </div>-->
         <div id="lead" class="site-section">
             <header>
                 <!--<div id="mobile-menu-close">
                     <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
                 </div>-->
                 <ul id="menu" class="shadow">
-                    <li>
-                        <span>.06 </span><a href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <span>.05 </span><a href="#skills">Skills</a>
-                    </li>
-                    <li>
-                        <span>.04 </span><a href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <span>.03 </span><a href="#education">Education</a>
-                    </li>
-                    <li>
-                        <span>.02 </span><a href="#experience">Experience</a>
-                    </li>
-                    <li>
-                        <span>.01 </span><a href="#about">About</a>
-                    </li>
+                    <li class="section-li"><span>.05 </span><a href="#contact">Contact</a></li>
+                    <li class="section-li"><span>.04 </span><a href="#projects">Projects</a></li>
+                    <li class="section-li"><span>.03 </span><a href="#education">Education</a></li>
+                    <li class="section-li"><span>.02 </span><a href="#experience">Experience</a></li>
+                    <li class="section-li"><span>.01 </span><a href="#about">About</a></li>
                 </ul>
             </header>
             <!-- End header -->
@@ -52,121 +38,204 @@
 
         <div id="about" class="site-section">
             <h2 class="section-heading"><span>.01 </span>ABOUT</h2>
-            <div id="about-content">
-                <div id="about-text">
-                    <h3>Hello!</h3>
-                    <p>My name is Matthew Heck. I am from Fort Wayne, Indiana and I am a senior computer science student at Indiana Wesleyan University (May '21).</p>
-                    <p>When I'm not hunched over my computer writing code, you can probably find me watching sports, listening to music, watching movies, exercising, <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">or</a> playing video games.</p>
+            <div class="section-content-container fade">
+                <div id="about-content">
+                    <div id="about-text">
+                        <h3>Hello!</h3>
+                        <p>My name is Matthew Heck. I am from Fort Wayne, Indiana and I am a senior computer science student at Indiana Wesleyan University (May '21).</p>
+                        <p>When I'm not hunched over my computer writing code, you can probably find me watching sports, listening to music, watching movies, exercising, <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">or</a> playing video games.</p>
+                    </div>
+                    <div id="about-image-container">
+                        <img id="about-image" src="./imgs/me.jpg">
+                    </div>
                 </div>
-                <div id="about-image-container">
-                    <img id="about-image" src="./imgs/me.jpg">
-                </div>
+                <!-- End #about-content -->
             </div>
-            <!-- End #about-content -->
+            <!-- End .section-content-container -->
         </div>
         <!-- End #about -->
 
         <div id="experience" class="site-section">
             <h2 class="section-heading"><span>.02 </span>EXPERIENCE</h2>
-            <div id="experience-content">
-                <div id="job-selectors">
-                    <ul>
-                        <li id="job1" class="job-li jselected">Journey Websites</li>
-                        <li id="job2" class="job-li">Parkview Hospital</li>
-                        <li id="job3" class="job-li">IWU CIS Division</li>
-                        <li id="job4" class="job-li">IT Xpress</li>
-                        <li id="job5" class="job-li">Land<span id="mobile-break">- </span>scaping</li>
-                    </ul>
-                    <script src="./js/jobSelectors.js"></script>
+            <div class="section-content-container fade">
+                <div id="experience-content">
+                    <div id="job-selectors">
+                        <ul>
+                            <li id="job1" class="job-li jselected">Journey Websites</li>
+                            <li id="job2" class="job-li">Parkview Hospital</li>
+                            <li id="job3" class="job-li">IWU CIS Division</li>
+                            <li id="job4" class="job-li">IT Xpress</li>
+                            <li id="job5" class="job-li">Land<span id="mobile-break">- </span>scaping</li>
+                        </ul>
+                        <script src="./js/jobSelectors.js"></script>
+                    </div>
+                    <!-- End #job-selectors -->
+                    <div id="job-content">
+                        <div class="job1 jselected">
+                            <h3 class="job-title">Full Stack Developer Intern</h3>
+                            <p class="job-location"><span class="job-at">@ </span>Journey Websites</p>
+                            <p class="time-range"><br>05/2020 - 08/2020</p>
+                            <ul>
+                                <li>Used JavaScript, PHP, HTML, and CSS to recreate a WordPress web site</li>
+                                <li>Collaborated with a team of developers</li>
+                                <li>Attended client meetings</li>
+                            </ul>
+                        </div>
+                        <div class="job2">
+                            <h3 class="job-title">Non-Clinical Intern</h3>
+                            <p class="job-location"><span class="job-at">@ </span>Parkview Hospital</p>
+                            <p class="time-range"><br>05/2019 - 08/2019</p>
+                            <ul>
+                                <li>Used JavaScript, HTML, and CSS to create a web app to display and edit .pson files</li>
+                                <li>Wrote Visual Basic scripts to make repeated Excel tasks faster and easier</li>
+                            </ul>
+                        </div>
+                        <div class="job3">
+                            <h3 class="job-title">Tutor and Grader</h3>
+                            <p class="job-location"><span class="job-at">@ </span>IWU CIS Division</p>
+                            <p class="time-range"><br>08/2019 - Present</p>
+                            <ul>
+                                <li>Attend weekly tutoring sessions for underclassmen</li>
+                                <li>Grade programming assignments</li>
+                            </ul>
+                        </div>
+                        <div class="job4">
+                            <h3 class="job-title">Student Technician</h3>
+                            <p class="job-location"><span class="job-at">@ </span>IT Xpress</p>
+                            <p class="time-range"><br>01/2018 - Present</p>
+                            <ul>
+                                <li>Help customers with various computer issues</li>
+                                <li>Communicate with customers about their repair</li>
+                                <li>Replace and upgrade computer components</li>
+                            </ul>
+                        </div>
+                        <div class="job5">
+                            <h3 class="job-title">Self-Employed Landscaper</h3>
+                            <p class="job-location"><span class="job-at">@ </span>Heck Bros. Landscaping</p>
+                            <p class="time-range"><br>06/2013 - Present</p>
+                            <ul>
+                                <li>Help customers with a variety of landscaping services</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End #job-content -->
                 </div>
-                <!-- End #job-selectors -->
-                <div id="job-content">
-                    <div class="job1 jselected">
-                        <h3 class="job-title">Full Stack Developer Intern</h3>
-                        <p class="job-location"><span class="job-at">@ </span>Journey Websites</p>
-                        <p class="time-range"><br>05/2020 - 08/2020</p>
-                        <ul>
-                            <li>Used JavaScript, PHP, HTML, and CSS to recreate a WordPress web site</li>
-                            <li>Collaborated with a team of developers</li>
-                            <li>Attended client meetings</li>
-                        </ul>
-                    </div>
-                    <div class="job2">
-                        <h3 class="job-title">Non-Clinical Intern</h3>
-                        <p class="job-location"><span class="job-at">@ </span>Parkview Hospital</p>
-                        <p class="time-range"><br>05/2019 - 08/2019</p>
-                        <ul>
-                            <li>Used JavaScript, HTML, and CSS to create a web app to display and edit .pson files</li>
-                            <li>Wrote Visual Basic scripts to make repeated Excel tasks faster and easier</li>
-                        </ul>
-                    </div>
-                    <div class="job3">
-                        <h3 class="job-title">Tutor and Grader</h3>
-                        <p class="job-location"><span class="job-at">@ </span>IWU CIS Division</p>
-                        <p class="time-range"><br>08/2019 - Present</p>
-                        <ul>
-                            <li>Attend weekly tutoring sessions for underclassmen</li>
-                            <li>Grade programming assignments</li>
-                        </ul>
-                    </div>
-                    <div class="job4">
-                        <h3 class="job-title">Student Technician</h3>
-                        <p class="job-location"><span class="job-at">@ </span>IT Xpress</p>
-                        <p class="time-range"><br>01/2018 - Present</p>
-                        <ul>
-                            <li>Help customers with various computer issues</li>
-                            <li>Communicate with customers about their repair</li>
-                            <li>Replace and upgrade computer components</li>
-                        </ul>
-                    </div>
-                    <div class="job5">
-                        <h3 class="job-title">Self-Employed Landscaper</h3>
-                        <p class="job-location"><span class="job-at">@ </span>Heck Bros. Landscaping</p>
-                        <p class="time-range"><br>06/2013 - Present</p>
-                        <ul>
-                            <li>Help customers with a variety of landscaping services</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- End #job-content -->
+                <!-- End #experience-content -->
+                <a href="#" id= "resume-button" class="btn-rounded-blue">Download Résumé</a>
             </div>
-            <!-- End #experience-content -->
-            <a href="#" id= "resume-button" class="btn-rounded-blue">Download Résumé</a>
+            <!-- End .section-content-container -->
         </div>
         <!-- End #experience -->
 
         <div id="education" class="site-section">
             <h2 class="section-heading"><span>.03 </span>EDUCATION</h2>
-            <div id="education-selectors">
-                <ul>
-                    <li id="edu1" class="edu-li eselected">College</li>
-                    <li id="edu2" class="edu-li">High School</li>
-                </ul>
-                <script src="./js/eduSelectors.js"></script>
-            </div>
-            <!-- End #education-selectors -->
-            <div id="education-content">
-                <div id="school-content">
-                    <div class="edu1 eselected">
-                        <h3 class="job-title">Computer Science Major</h3>
-                        <p class="job-location"><span class="job-at">@ </span>Indiana Wesleyan University</p>
-                        <p class="time-range-edu"><br>08/2017 - 05/2021</p>
-                        <p class="gpa">GPA: 3.87 (3.93 in-major)</p><br>
-                        <p id="courses-title">Related Coursework:</p>
-                        <p>Data Structures, Object-Oriented Programming, Calculus, Discrete Mathematics, Systems Analysis and Design, Programming Languages, Operating Systems, Intro to Software Engineering, Computer Network Fundamentals, Database Programming, Internet Programming, Software Testing, Analysis of Algorithms, Advanced Internet Concepts, Senior Project I & II</p>
-                    </div>
-                    <div class="edu2">
-                        <h3 class="job-title">Student</h3>
-                        <p class="job-location"><span class="job-at">@ </span>Leo Jr./Sr. High School</p>
-                        <p class="time-range-edu"><br>08/2013 - 06/2017</p>
-                        <p class="gpa">GPA: 4.0</p><br>
-                        <p>Academic Honors Diploma</p>
-                    </div>
+            <div class="section-content-container fade">
+                <div id="education-selectors">
+                    <ul>
+                        <li id="edu1" class="edu-li eselected">College</li>
+                        <li id="edu2" class="edu-li">High School</li>
+                    </ul>
+                    <script src="./js/eduSelectors.js"></script>
                 </div>
-                <!-- End #school-content -->
+                <!-- End #education-selectors -->
+                <div id="education-content">
+                    <div id="school-content">
+                        <div class="edu1 eselected">
+                            <h3 class="job-title">Computer Science Major</h3>
+                            <p class="job-location"><span class="job-at">@ </span>Indiana Wesleyan University</p>
+                            <p class="time-range-edu"><br>08/2017 - 05/2021</p>
+                            <p class="gpa">GPA: 3.87 (3.93 in-major)</p><br>
+                            <p id="courses-title">Related Coursework:</p>
+                            <p>Data Structures, Object-Oriented Programming, Calculus, Discrete Mathematics, Systems Analysis and Design, Programming Languages, Operating Systems, Intro to Software Engineering, Computer Network Fundamentals, Database Programming, Internet Programming, Software Testing, Analysis of Algorithms, Advanced Internet Concepts, Senior Project I & II</p>
+                        </div>
+                        <div class="edu2">
+                            <h3 class="job-title">Student</h3>
+                            <p class="job-location"><span class="job-at">@ </span>Leo Jr./Sr. High School</p>
+                            <p class="time-range-edu"><br>08/2013 - 06/2017</p>
+                            <p class="gpa">GPA: 4.0</p><br>
+                            <p>Academic Honors Diploma</p>
+                        </div>
+                    </div>
+                    <!-- End #school-content -->
+                </div>
+                <!-- End #education-content -->
             </div>
-            <!-- End #education-content -->
+            <!-- End .section-content-container -->
         </div>
         <!-- End #education -->
+
+        <div id="projects" class="site-section">
+            <h2 class="section-heading"><span>.04 </span>PROJECTS</h2>
+            <div class="section-content-container fade">
+                <div id="projects-selectors">
+                    <ul>
+                        <li id="left-arrow" class="li-arrow"><i class="fas fa-caret-left"></i></li>
+                        <li id="proj1" class="proj-li pselected">deck_of_cards</li>
+                        <li id="proj2" class="proj-li">Messaging App</li>
+                        <li id="proj3" class="proj-li">Huffman Compression</li>
+                        <li id="proj4" class="proj-li">Minecraft Modding</li>
+                        <li id="proj5" class="proj-li">Android Calculator</li>
+                        <li id="right-arrow" class="li-arrow ready"><i class="fas fa-caret-right"></i></li>
+                    </ul>
+                    <script src="./js/projSelectors.js"></script>
+                </div>
+                <!-- End #projects-selectors -->
+                <!--
+                <div id="projects-content"></div>
+                    <div id="job-content">
+                        <div class="job1 jselected">
+                            <h3 class="job-title">Full Stack Developer Intern</h3>
+                            <p class="job-location"><span class="job-at">@ </span>Journey Websites</p>
+                            <p class="time-range"><br>05/2020 - 08/2020</p>
+                            <ul>
+                                <li>Used JavaScript, PHP, HTML, and CSS to recreate a WordPress web site</li>
+                                <li>Collaborated with a team of developers</li>
+                                <li>Attended client meetings</li>
+                            </ul>
+                        </div>
+                        <div class="job2">
+                            <h3 class="job-title">Non-Clinical Intern</h3>
+                            <p class="job-location"><span class="job-at">@ </span>Parkview Hospital</p>
+                            <p class="time-range"><br>05/2019 - 08/2019</p>
+                            <ul>
+                                <li>Used JavaScript, HTML, and CSS to create a web app to display and edit .pson files</li>
+                                <li>Wrote Visual Basic scripts to make repeated Excel tasks faster and easier</li>
+                            </ul>
+                        </div>
+                        <div class="job3">
+                            <h3 class="job-title">Tutor and Grader</h3>
+                            <p class="job-location"><span class="job-at">@ </span>IWU CIS Division</p>
+                            <p class="time-range"><br>08/2019 - Present</p>
+                            <ul>
+                                <li>Attend weekly tutoring sessions for underclassmen</li>
+                                <li>Grade programming assignments</li>
+                            </ul>
+                        </div>
+                        <div class="job4">
+                            <h3 class="job-title">Student Technician</h3>
+                            <p class="job-location"><span class="job-at">@ </span>IT Xpress</p>
+                            <p class="time-range"><br>01/2018 - Present</p>
+                            <ul>
+                                <li>Help customers with various computer issues</li>
+                                <li>Communicate with customers about their repair</li>
+                                <li>Replace and upgrade computer components</li>
+                            </ul>
+                        </div>
+                        <div class="job5">
+                            <h3 class="job-title">Self-Employed Landscaper</h3>
+                            <p class="job-location"><span class="job-at">@ </span>Heck Bros. Landscaping</p>
+                            <p class="time-range"><br>06/2013 - Present</p>
+                            <ul>
+                                <li>Help customers with a variety of landscaping services</li>
+                            </ul>
+                        </div>
+                    </div>-->
+                    <!-- End #job-content -->
+                </div>
+                <!-- End #experience-content -->
+            </div>
+            <!-- End .section-content-container -->
+        </div>
+        <!-- End #experience -->
 </body>
 </html>

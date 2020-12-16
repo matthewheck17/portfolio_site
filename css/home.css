@@ -12,6 +12,11 @@
     position: relative;
 }
 
+.section-content-container {
+    height: 100%;
+    width: 100%;
+}
+
 .btn-rounded-blue {
     background: transparent;
     text-decoration: none;
@@ -48,7 +53,7 @@
     overflow: hidden;
 }
 
-#menu li {
+.section-li {
     display: block;
     float: right;
     text-align: center;
@@ -60,12 +65,12 @@
     color: #004545;
 }
 
-#menu li a {
+.section-li a {
     color: #9b9b9b;
     text-decoration: none;
 }
 
-#menu li:hover {
+.section-li:hover {
     background-color: #111111;
 }
 
@@ -242,7 +247,7 @@
 /* EDUCATION SECTION */
 
 #education > .section-heading {
-    background-image: linear-gradient(135deg, black 60%, transparent 50px), linear-gradient(-45deg, #FED8B1 30%, transparent 50px);
+    background-image: linear-gradient(135deg, black 65%, transparent 50px), linear-gradient(-45deg, #FED8B1 25%, transparent 50px);
 }
 
 #education-content {
@@ -308,6 +313,79 @@
     color: #BBFFFF;
 }
 
+/* PROJECTS SECTION */
+
+#projects-content {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    color: #9b9b9b;
+}
+
+#projects > .section-heading {
+    background-image: linear-gradient(135deg, black 65%, transparent 50px), linear-gradient(-45deg, #FED8B1 25%, transparent 50px);
+}
+
+#projects-selectors {
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-bottom: 30px;
+    text-align: center;
+    width: 60%;
+    overflow: hidden;
+}
+
+#projects-selectors ul {
+    width: 100%;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.proj-li {
+    display: inline-block;
+    padding: 17px 0;
+    font-size: 14px;
+    color: #202020;
+    border-bottom: solid 2px #008080;
+    transition: .5s all ease;
+    width: 3%;
+    margin-right: -5px;
+    -webkit-user-select: none;    
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.proj-li.pselected {
+    color: #FFF;
+    border-bottom: solid 2px #BBFFFF;
+    transition: .5s all ease;
+    width: 70%;
+}
+
+.li-arrow {
+    display: inline-block;
+    padding: 17px 0;
+    font-size: 22px;
+    width: 3%;
+    transition: .5s all ease;
+    color: #202020;
+    border: none;
+    -webkit-user-select: none;    
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.li-arrow.ready {
+    color: #FFF;
+}
+
 
 
 /* MEDIA QUERIES */
@@ -369,6 +447,15 @@
 
     #mobile-break {
         display: unset;
+    }
+
+    #education-selectors {
+        top: 15%;
+    }
+
+    #projects-selectors {
+        top: 15%;
+        width: 90%;
     }
 
 }
