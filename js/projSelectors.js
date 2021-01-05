@@ -18,11 +18,9 @@ function handleClick() {
     while (find[0] !== undefined){
         find[0].classList.remove("pselected");
     }
-    this.classList.add("pselected");
-    /*
-    var eduDesc = document.getElementsByClassName(this.id);
-    eduDesc[0].classList.add("pselected");*/
-
+    this.classList.add("pselected")
+    var projDesc = document.getElementsByClassName(this.id);
+    projDesc[0].classList.add("pselected");
     checkToRemoveArrows();
 }
 
@@ -55,8 +53,12 @@ function handleLeftArrowClick() {
     }
     var selected = document.getElementsByClassName("pselected");
     var preSelected = "proj" + (parseInt(selected[0].id.slice(-1)) - 1);
-    selected[0].classList.remove("pselected");
+    while (selected[0] !== undefined){
+        selected[0].classList.remove("pselected");
+    }
     document.getElementById(preSelected).classList.add("pselected");
+    var projDesc = document.getElementsByClassName(preSelected);
+    projDesc[0].classList.add("pselected");
     checkToRemoveArrows();
 }
 
@@ -72,7 +74,11 @@ function handleRightArrowClick() {
 
     var selected = document.getElementsByClassName("pselected");
     var postSelected = "proj" + (parseInt(selected[0].id.slice(-1)) + 1);
-    selected[0].classList.remove("pselected");
+    while (selected[0] !== undefined){
+        selected[0].classList.remove("pselected");
+    }
     document.getElementById(postSelected).classList.add("pselected");
+    var projDesc = document.getElementsByClassName(postSelected);
+    projDesc[0].classList.add("pselected");
     checkToRemoveArrows();
 }

@@ -1,38 +1,59 @@
 $(window).on("load",function() {
-    var fadingIn = false;
-    var fadingOut = false;
-    $(window).scroll(function() {
-      var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-      $(".fade").each(function() {
-        /* Check the location of each desired element */
-        var objectBottom = $(this).offset().top + $(this).outerHeight()/2;
-        if (this.id == "education-container"){
-          console.log("objbottom: " + objectBottom + " windowbottom: " + windowBottom);
-        }
+  var completed = false;
+  var about = false;
+  var experience = false;
+  var education = false;
+  var projects = false;
+  var contact = false;
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $(".fade").each(function() {
+      if (completed) {
+        return;
+      }
 
-        /* If the element is completely within bounds of the window, fade it in */
-        if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-          if (!fadingIn){
-            if ($(this).css("opacity")==0) {
-              $(this).fadeTo(500,1, function() {
-                //Reset the fade-in flag when the animation is over
-                fadingIn = false;
-              }); 
-              fadingIn = true;
-            }
-          }
-        } else { //object goes out of view (scrolling up)
-          if (!fadingOut){
-            if ($(this).css("opacity")==1) {
-              $(this).fadeTo(500,0, function() {
-                //Reset the fade-in flag when the animation is over
-                fadingOut = false;
-              });
-              fadingOut = true;
-            }
-          }
-        }
+      if (this.id == "about-fade" && about){
+        return;
+      }
+  
+      if (this.id == "experience-fade" && experience){
+        return;
+      }
+  
+      if (this.id == "education-fade" && education){
+        return;
+      }
+  
+      if (this.id == "projects-fade" && projects){
+        return;
+      }
+  
+      if (this.id == "contact-fade" && contact){
+        return;
+      }
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight()/2;
 
-      });
-    }).scroll(); //invoke scroll-handler on page-load
-  });
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+        $(this).fadeTo(700,1, function() {
+          if (this.id == "about-fade"){
+            about = true;
+          }
+          if (this.id == "experience-fade"){
+            experience = true;
+          }
+          if (this.id == "education-fade"){
+            education = true;
+          }
+          if (this.id == "projects-fade"){
+            projects = true;
+          }
+          if (this.id == "contact-fade"){
+            contact = true;
+          }
+        });
+      }
+    });
+  }).scroll(); //invoke scroll-handler on page-load
+});

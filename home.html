@@ -18,11 +18,11 @@
                     <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
                 </div>-->
                 <ul id="menu" class="shadow">
-                    <li class="section-li"><span>.05 </span><a href="#contact">Contact</a></li>
-                    <li class="section-li"><span>.04 </span><a href="#projects">Projects</a></li>
-                    <li class="section-li"><span>.03 </span><a href="#education">Education</a></li>
-                    <li class="section-li"><span>.02 </span><a href="#experience">Experience</a></li>
-                    <li class="section-li"><span>.01 </span><a href="#about">About</a></li>
+                    <li class="section-li" href="#contact"><a href="#contact"><span>.05 </span>Contact</a></li>
+                    <li class="section-li"><a href="#education" onclick="$(window).scroll();"><span>.04 </span>Education</a></li>
+                    <li class="section-li"><a href="#experience" onclick="$(window).scroll();"><span>.03 </span>Experience</a></li>
+                    <li class="section-li"><a href="#projects" onclick="$(window).scroll();"><span>.02 </span>Projects</a></li>
+                    <li class="section-li"><a href="#about" onclick="$(window).scroll();"><span>.01 </span>About</a></li>
                 </ul>
             </header>
             <!-- End header -->
@@ -38,7 +38,7 @@
 
         <div id="about" class="site-section">
             <h2 class="section-heading"><span>.01 </span>ABOUT</h2>
-            <div class="section-content-container fade">
+            <div id="about-fade" class="section-content-container fade">
                 <div id="about-content">
                     <div id="about-text">
                         <h3>Hello!</h3>
@@ -55,9 +55,88 @@
         </div>
         <!-- End #about -->
 
+        <div id="projects" class="site-section">
+            <h2 class="section-heading"><span>.02 </span>PROJECTS</h2>
+            <div id="projects-fade" class="section-content-container fade">
+                <div id="project-arrow-container">
+                    <div id="left-arrow" class="project-arrow"><i class="fas fa-caret-left"></i></div>
+                    <div id="right-arrow" class="project-arrow ready"><i class="fas fa-caret-right"></i></div>
+                </div>
+                <!-- End #projects-selectors -->
+                <div id="projects-content">
+                    <ul>
+                        <li id="proj1" class="proj-li pselected">deck_of_cards</li>
+                        <li id="proj2" class="proj-li">Messaging App</li>
+                        <li id="proj3" class="proj-li">Huffman Compression</li>
+                        <li id="proj4" class="proj-li">Minecraft Modding</li>
+                        <li id="proj5" class="proj-li">Portfolio Site</li>
+                    </ul>
+                    <br><br>
+                    <script src="./js/projSelectors.js"></script> <!-- adds onclicks for arrows and li's -->
+                    <div class="proj1 pselected">
+                        <img class="proj-picture" src="./imgs/projects/cards1.png">
+                        <img class="proj-picture" src="./imgs/projects/cards2.png">
+                        <p><span>Technologies: </span>JavaScript, ReactJS, HTML, CSS</p>
+                        <p>This is a ReactJS web app which simulates a deck of cards and allows users to play card games.</p>
+                        <br>
+                        <br>
+                        <a href="https://matthewheck17.github.io/deck_of_cards/" class="btn-rounded-blue proj-demo">Demo</a>
+                        <a href="https://github.com/matthewheck17/deck_of_cards" class="btn-rounded-blue proj-code">Code</a>
+                    </div>
+                    <!-- End #proj1 -->
+
+                    <div class="proj2">
+                        <img class="proj-picture" src="./imgs/projects/cards1.png">
+                        <img class="proj-picture" src="./imgs/projects/cards2.png">
+                        <p><span>Technologies: </span>PHP, JavaScript, AJAX, SQL, HTML, CSS</p>
+                        <p>This is a web application that allows users to send messages to other users or to a global thread.</p>
+                        <br>
+                        <br>
+                        <a href="#todo" class="btn-rounded-blue proj-demo">Demo</a>
+                        <a href="#todo" class="btn-rounded-blue proj-code">Code</a>
+                    </div>
+                    <!-- End #proj2 -->
+
+                    <div class="proj3">
+                        <img class="proj-picture gray-border huff-pic" src="./imgs/projects/huffman1.jpeg">
+                        <img class="proj-picture gray-border huff-pic" src="./imgs/projects/huffman2.jpeg">
+                        <p><span>Technologies: </span>C++</p>
+                        <p>This is my implementation of Huffman's algorithm. It takes an input and outputs all new codes along with the level of compression achieved.</p>
+                        <br>
+                        <a href="https://github.com/matthewheck17/Huffman_Compression" class="btn-rounded-blue proj-code">Code</a>
+                    </div>
+                    <!-- End #proj3 -->
+
+                    <div class="proj4">
+                        <img class="proj-picture mod-pic" src="./imgs/projects/mod1.png">
+                        <p><span>Technologies: </span>Java</p>
+                        <p>This is a minecraft mod I wrote that adds custom blocks and items to the game.</p>
+                        <br>
+                        <br>
+                        <a href="https://github.com/matthewheck17/minecraft_modding" class="btn-rounded-blue proj-code">Code</a>
+                    </div>
+                    <!-- End #proj4 -->
+
+                    <div class="proj5">
+                        <img class="proj-picture gray-border" src="./imgs/projects/portfolio1.png">
+                        <img class="proj-picture gray-border" src="./imgs/projects/portfolio2.png">
+                        <p><span>Technologies: </span>JavaScript, HTML, CSS</p>
+                        <p>I created and designed this site myself. Feel free to check out the code!</p>
+                        <br>
+                        <br>
+                        <a href="#todo" class="btn-rounded-blue proj-code">Code</a>
+                    </div>
+                    <!-- End #proj5 -->
+                </div>
+                <!-- End #projects-content -->
+            </div>
+            <!-- End .section-content-container -->
+        </div>
+        <!-- End #projects -->
+
         <div id="experience" class="site-section">
-            <h2 class="section-heading"><span>.02 </span>EXPERIENCE</h2>
-            <div class="section-content-container fade">
+            <h2 class="section-heading"><span>.03 </span>EXPERIENCE</h2>
+            <div id="experience-fade" class="section-content-container fade">
                 <div id="experience-content">
                     <div id="job-selectors">
                         <ul>
@@ -128,8 +207,8 @@
         <!-- End #experience -->
 
         <div id="education" class="site-section">
-            <h2 class="section-heading"><span>.03 </span>EDUCATION</h2>
-            <div class="section-content-container fade">
+            <h2 class="section-heading"><span>.04 </span>EDUCATION</h2>
+            <div id="education-fade" class="section-content-container fade">
                 <div id="education-selectors">
                     <ul>
                         <li id="edu1" class="edu-li eselected">College</li>
@@ -163,79 +242,5 @@
             <!-- End .section-content-container -->
         </div>
         <!-- End #education -->
-
-        <div id="projects" class="site-section">
-            <h2 class="section-heading"><span>.04 </span>PROJECTS</h2>
-            <div class="section-content-container fade">
-                <div id="projects-selectors">
-                    <ul>
-                        <li id="left-arrow" class="li-arrow"><i class="fas fa-caret-left"></i></li>
-                        <li id="proj1" class="proj-li pselected">deck_of_cards</li>
-                        <li id="proj2" class="proj-li">Messaging App</li>
-                        <li id="proj3" class="proj-li">Huffman Compression</li>
-                        <li id="proj4" class="proj-li">Minecraft Modding</li>
-                        <li id="proj5" class="proj-li">Android Calculator</li>
-                        <li id="right-arrow" class="li-arrow ready"><i class="fas fa-caret-right"></i></li>
-                    </ul>
-                    <script src="./js/projSelectors.js"></script>
-                </div>
-                <!-- End #projects-selectors -->
-                <!--
-                <div id="projects-content"></div>
-                    <div id="job-content">
-                        <div class="job1 jselected">
-                            <h3 class="job-title">Full Stack Developer Intern</h3>
-                            <p class="job-location"><span class="job-at">@ </span>Journey Websites</p>
-                            <p class="time-range"><br>05/2020 - 08/2020</p>
-                            <ul>
-                                <li>Used JavaScript, PHP, HTML, and CSS to recreate a WordPress web site</li>
-                                <li>Collaborated with a team of developers</li>
-                                <li>Attended client meetings</li>
-                            </ul>
-                        </div>
-                        <div class="job2">
-                            <h3 class="job-title">Non-Clinical Intern</h3>
-                            <p class="job-location"><span class="job-at">@ </span>Parkview Hospital</p>
-                            <p class="time-range"><br>05/2019 - 08/2019</p>
-                            <ul>
-                                <li>Used JavaScript, HTML, and CSS to create a web app to display and edit .pson files</li>
-                                <li>Wrote Visual Basic scripts to make repeated Excel tasks faster and easier</li>
-                            </ul>
-                        </div>
-                        <div class="job3">
-                            <h3 class="job-title">Tutor and Grader</h3>
-                            <p class="job-location"><span class="job-at">@ </span>IWU CIS Division</p>
-                            <p class="time-range"><br>08/2019 - Present</p>
-                            <ul>
-                                <li>Attend weekly tutoring sessions for underclassmen</li>
-                                <li>Grade programming assignments</li>
-                            </ul>
-                        </div>
-                        <div class="job4">
-                            <h3 class="job-title">Student Technician</h3>
-                            <p class="job-location"><span class="job-at">@ </span>IT Xpress</p>
-                            <p class="time-range"><br>01/2018 - Present</p>
-                            <ul>
-                                <li>Help customers with various computer issues</li>
-                                <li>Communicate with customers about their repair</li>
-                                <li>Replace and upgrade computer components</li>
-                            </ul>
-                        </div>
-                        <div class="job5">
-                            <h3 class="job-title">Self-Employed Landscaper</h3>
-                            <p class="job-location"><span class="job-at">@ </span>Heck Bros. Landscaping</p>
-                            <p class="time-range"><br>06/2013 - Present</p>
-                            <ul>
-                                <li>Help customers with a variety of landscaping services</li>
-                            </ul>
-                        </div>
-                    </div>-->
-                    <!-- End #job-content -->
-                </div>
-                <!-- End #experience-content -->
-            </div>
-            <!-- End .section-content-container -->
-        </div>
-        <!-- End #experience -->
 </body>
 </html>
