@@ -113,6 +113,23 @@
     margin-bottom: 30px;
 }
 
+.profile-link {
+    color: #BBFFFF;
+    font-size: 22px;
+    margin: 0 5px;
+}
+
+#resume-link {
+    position: relative;
+    top: 4px;
+    height: 22px;
+}
+
+.profile-link:hover {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
 /* ABOUT SECTION */
 
 #about-content {
@@ -344,6 +361,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    overflow: hidden;
 }
 
 #projects-content .proj-li.pselected {
@@ -468,10 +486,6 @@
         font-size: 14px;
     }
 
-    #menu {
-        display: none;
-    }
-
     #experience-content {
         width: 95%;
     }
@@ -482,6 +496,14 @@
 
     #education-content {
         width: 85%;
+    }
+}
+
+@media screen and (max-width: 495px) {
+
+    #menu li a {
+        font-size: 12px;
+        padding: 3px;
     }
 }
 
