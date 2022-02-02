@@ -12,238 +12,239 @@
     <script src="./js/fade.js"></script>
 </head>
 <body>
-    <body>
-        <div id="lead" class="site-section">
-            <header>
-                <!--<div id="mobile-menu-close">
-                    <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-                </div>-->
-                <ul id="menu" class="shadow">
-                    <li class="section-li"><a href="#education" onclick="$(window).scroll();"><span>.04 </span>Education</a></li>
-                    <li class="section-li"><a href="#experience" onclick="$(window).scroll();"><span>.03 </span>Experience</a></li>
-                    <li class="section-li"><a href="#projects" onclick="$(window).scroll();"><span>.02 </span>Projects</a></li>
-                    <li class="section-li"><a href="#about" onclick="$(window).scroll();"><span>.01 </span>About</a></li>
+    <div id="lead" class="site-section">
+        <header>
+            <!--<div id="mobile-menu-close">
+                <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+            </div>-->
+            <ul id="menu" class="shadow">
+                <li class="section-li"><a href="#education" onclick="$(window).scroll();"><span>.04 </span>Education</a></li>
+                <li class="section-li"><a href="#experience" onclick="$(window).scroll();"><span>.03 </span>Experience</a></li>
+                <li class="section-li"><a href="#projects" onclick="$(window).scroll();"><span>.02 </span>Projects</a></li>
+                <li class="section-li"><a href="#about" onclick="$(window).scroll();"><span>.01 </span>About</a></li>
+            </ul>
+        </header>
+        <!-- End header -->
+
+        <div id="lead-content">
+            <h2 id="name-header">Matthew Heck</h2>
+            <h2 id="title-header">Software Engineer</h2>
+            <a href="https://github.com/matthewheck17" class="profile-link"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/matthew-heck-a85081203/" class="profile-link"><i class="fab fa-linkedin"></i></a>
+            <a href="./Resume.pdf" class="profile-link"><img id="resume-link" src="./imgs/resume.png"/></a>
+            <script src="./js/resumeHover.js"></script>
+        </div>
+        <!-- End #lead-content -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about" class="site-section">
+        <h2 class="section-heading"><span>.01 </span>ABOUT</h2>
+        <div id="about-fade" class="section-content-container fade">
+            <div id="about-content">
+                <div id="about-text">
+                    <h3>Hello!</h3>
+                    <p>My name is Matthew Heck. I am from Fort Wayne, Indiana and I am a software engineer at Sweetwater Sound.</p>
+                </div>
+                <div id="about-image-container">
+                    <img id="about-image" src="./imgs/me.jpg">
+                </div>
+            </div>
+            <!-- End #about-content -->
+        </div>
+        <!-- End .section-content-container -->
+    </div>
+    <!-- End #about -->
+
+    <div id="projects" class="site-section">
+        <h2 class="section-heading"><span>.02 </span>PROJECTS</h2>
+        <div id="projects-fade" class="section-content-container fade">
+            <div id="project-arrow-container">
+                <div id="left-arrow" class="project-arrow"><i class="fas fa-caret-left"></i></div>
+                <div id="right-arrow" class="project-arrow ready"><i class="fas fa-caret-right"></i></div>
+            </div>
+            <!-- End #projects-selectors -->
+            <div id="projects-content">
+                <ul>
+                    <li id="proj1" class="proj-li pselected">YOOHOO</li>
+                    <li id="proj2" class="proj-li">First Bucket</li>
+                    <li id="proj3" class="proj-li">deck_of_cards</li>
+                    <li id="proj4" class="proj-li">Huffman Compression</li>
+                    <li id="proj5" class="proj-li">Portfolio Site</li>
                 </ul>
-            </header>
-            <!-- End header -->
-
-            <div id="lead-content">
-                <h2 id="name-header">Matthew Heck</h2>
-                <h2 id="title-header">Software Developer</h2>
-                <a href="https://github.com/matthewheck17" class="profile-link"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/matthew-heck-a85081203/" class="profile-link"><i class="fab fa-linkedin"></i></a>
-                <a href="./Resume.pdf" class="profile-link"><img id="resume-link" src="./imgs/resume.png"/></a>
-                <script src="./js/resumeHover.js"></script>
-            </div>
-            <!-- End #lead-content -->
-        </div>
-        <!-- End #lead -->
-
-        <div id="about" class="site-section">
-            <h2 class="section-heading"><span>.01 </span>ABOUT</h2>
-            <div id="about-fade" class="section-content-container fade">
-                <div id="about-content">
-                    <div id="about-text">
-                        <h3>Hello!</h3>
-                        <p>My name is Matthew Heck. I am from Fort Wayne, Indiana and I am a senior computer science student at Indiana Wesleyan University (May '21).</p>
-                        <p>When I'm not hunched over my computer writing code, you can probably find me watching sports, listening to music, watching movies, exercising, <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">or</a> playing video games.</p>
-                    </div>
-                    <div id="about-image-container">
-                        <img id="about-image" src="./imgs/me.jpg">
-                    </div>
+                <br><br>
+                <script src="./js/projSelectors.js"></script> <!-- adds onclicks for arrows and li's -->
+                
+                <div class="proj1 pselected">
+                    <img class="proj-picture gray-border" src="./imgs/projects/yoohoo1.png">
+                    <img class="proj-picture gray-border" src="./imgs/projects/yoohoo2.png">
+                    <p><span>Technologies: </span>PHP, JavaScript, SQL, HTML, CSS</p>
+                    <p>This is a web application that allows users to send messages to other users or to a global thread.</p>
+                    <br>
+                    <br>
+                    <a href="http://matthewheck.me/yoohoo/login.php" class="btn-rounded-blue proj-demo">Demo</a>
+                    <a href="https://github.com/matthewheck17/yoohoo" class="btn-rounded-blue proj-code">Code</a>
                 </div>
-                <!-- End #about-content -->
-            </div>
-            <!-- End .section-content-container -->
-        </div>
-        <!-- End #about -->
+                <!-- End #proj1 -->
 
-        <div id="projects" class="site-section">
-            <h2 class="section-heading"><span>.02 </span>PROJECTS</h2>
-            <div id="projects-fade" class="section-content-container fade">
-                <div id="project-arrow-container">
-                    <div id="left-arrow" class="project-arrow"><i class="fas fa-caret-left"></i></div>
-                    <div id="right-arrow" class="project-arrow ready"><i class="fas fa-caret-right"></i></div>
+                <div class="proj2">
+                    <img class="proj-picture gray-border" src="./imgs/projects/bucket1.png">
+                    <img class="proj-picture gray-border" src="./imgs/projects/bucket2.png">
+                    <p><span>Technologies: </span>Python, PHP, JavaScript, SQL, HTML, CSS</p>
+                    <p>This is a web app that displays who scored the first basket in each nba game.</p>
+                    <br>
+                    <br>
+                    <a href="http://matthewheck.me/first_bucket/home.html" class="btn-rounded-blue proj-demo">Demo</a>
+                    <a href="https://github.com/matthewheck17/first_bucket" class="btn-rounded-blue proj-code">Code</a>
                 </div>
-                <!-- End #projects-selectors -->
-                <div id="projects-content">
+                <!-- End #proj2 -->
+                
+                <div class="proj3">
+                    <img class="proj-picture" src="./imgs/projects/cards1.png">
+                    <img class="proj-picture" src="./imgs/projects/cards2.png">
+                    <p><span>Technologies: </span>JavaScript, ReactJS, HTML, CSS</p>
+                    <p>This is a ReactJS web app which simulates a deck of cards and allows users to play card games.</p>
+                    <br>
+                    <br>
+                    <a href="https://matthewheck17.github.io/deck_of_cards/" class="btn-rounded-blue proj-demo">Demo</a>
+                    <a href="https://github.com/matthewheck17/deck_of_cards" class="btn-rounded-blue proj-code">Code</a>
+                </div>
+                <!-- End #proj3 -->
+
+                <div class="proj4">
+                    <img class="proj-picture gray-border huff-pic" src="./imgs/projects/huffman1.jpeg">
+                    <img class="proj-picture gray-border huff-pic" src="./imgs/projects/huffman2.jpeg">
+                    <p><span>Technologies: </span>C++</p>
+                    <p>This is my implementation of Huffman's algorithm. It takes an input and outputs all new codes along with the level of compression achieved.</p>
+                    <br>
+                    <a href="https://github.com/matthewheck17/Huffman_Compression" class="btn-rounded-blue proj-code">Code</a>
+                </div>
+                <!-- End #proj4 -->
+
+                <div class="proj5">
+                    <img class="proj-picture gray-border" src="./imgs/projects/portfolio1.png">
+                    <img class="proj-picture gray-border" src="./imgs/projects/portfolio2.png">
+                    <p><span>Technologies: </span>JavaScript, HTML, CSS</p>
+                    <p>I created and designed this site myself from scratch. Feel free to check out the code!</p>
+                    <br>
+                    <br>
+                    <a href="https://github.com/matthewheck17/portfolio_site" class="btn-rounded-blue proj-code">Code</a>
+                </div>
+                <!-- End #proj5 -->
+            </div>
+            <!-- End #projects-content -->
+        </div>
+        <!-- End .section-content-container -->
+    </div>
+    <!-- End #projects -->
+
+    <div id="experience" class="site-section">
+        <h2 class="section-heading"><span>.03 </span>EXPERIENCE</h2>
+        <div id="experience-fade" class="section-content-container fade">
+            <div id="experience-content">
+                <div id="job-selectors">
                     <ul>
-                        <li id="proj1" class="proj-li pselected">YOOHOO</li>
-                        <li id="proj2" class="proj-li">deck_of_cards</li>
-                        <li id="proj3" class="proj-li">Huffman Compression</li>
-                        <li id="proj4" class="proj-li">Minecraft Modding</li>
-                        <li id="proj5" class="proj-li">Portfolio Site</li>
+                        <li id="job1" class="job-li jselected">Sweetwater Sound</li>
+                        <li id="job2" class="job-li">Journey Websites</li>
+                        <li id="job3" class="job-li">Parkview Hospital</li>
+                        <li id="job4" class="job-li">IWU CIS Division</li>
+                        <li id="job5" class="job-li">IT Xpress</li>
                     </ul>
-                    <br><br>
-                    <script src="./js/projSelectors.js"></script> <!-- adds onclicks for arrows and li's -->
-                    
-                    <div class="proj1 pselected">
-                        <img class="proj-picture gray-border" src="./imgs/projects/yoohoo1.png">
-                        <img class="proj-picture gray-border" src="./imgs/projects/yoohoo2.png">
-                        <p><span>Technologies: </span>PHP, JavaScript, SQL, HTML, CSS</p>
-                        <p>This is a web application that allows users to send messages to other users or to a global thread.</p>
-                        <br>
-                        <br>
-                        <a href="http://matthewheck.me/yoohoo/login.php" class="btn-rounded-blue proj-demo">Demo</a>
-                        <a href="https://github.com/matthewheck17/yoohoo" class="btn-rounded-blue proj-code">Code</a>
-                    </div>
-                    <!-- End #proj1 -->
-                    
-                    <div class="proj2">
-                        <img class="proj-picture" src="./imgs/projects/cards1.png">
-                        <img class="proj-picture" src="./imgs/projects/cards2.png">
-                        <p><span>Technologies: </span>JavaScript, ReactJS, HTML, CSS</p>
-                        <p>This is a ReactJS web app which simulates a deck of cards and allows users to play card games.</p>
-                        <br>
-                        <br>
-                        <a href="https://matthewheck17.github.io/deck_of_cards/" class="btn-rounded-blue proj-demo">Demo</a>
-                        <a href="https://github.com/matthewheck17/deck_of_cards" class="btn-rounded-blue proj-code">Code</a>
-                    </div>
-                    <!-- End #proj2 -->
-
-                    <div class="proj3">
-                        <img class="proj-picture gray-border huff-pic" src="./imgs/projects/huffman1.jpeg">
-                        <img class="proj-picture gray-border huff-pic" src="./imgs/projects/huffman2.jpeg">
-                        <p><span>Technologies: </span>C++</p>
-                        <p>This is my implementation of Huffman's algorithm. It takes an input and outputs all new codes along with the level of compression achieved.</p>
-                        <br>
-                        <a href="https://github.com/matthewheck17/Huffman_Compression" class="btn-rounded-blue proj-code">Code</a>
-                    </div>
-                    <!-- End #proj3 -->
-
-                    <div class="proj4">
-                        <img class="proj-picture mod-pic" src="./imgs/projects/mod1.png">
-                        <p><span>Technologies: </span>Java</p>
-                        <p>This is a minecraft mod I wrote that adds custom blocks and items to the game.</p>
-                        <br>
-                        <br>
-                        <a href="https://github.com/matthewheck17/minecraft_modding" class="btn-rounded-blue proj-code">Code</a>
-                    </div>
-                    <!-- End #proj4 -->
-
-                    <div class="proj5">
-                        <img class="proj-picture gray-border" src="./imgs/projects/portfolio1.png">
-                        <img class="proj-picture gray-border" src="./imgs/projects/portfolio2.png">
-                        <p><span>Technologies: </span>JavaScript, HTML, CSS</p>
-                        <p>I created and designed this site myself. Feel free to check out the code!</p>
-                        <br>
-                        <br>
-                        <a href="https://github.com/matthewheck17/portfolio_site" class="btn-rounded-blue proj-code">Code</a>
-                    </div>
-                    <!-- End #proj5 -->
+                    <script src="./js/jobSelectors.js"></script>
                 </div>
-                <!-- End #projects-content -->
-            </div>
-            <!-- End .section-content-container -->
-        </div>
-        <!-- End #projects -->
-
-        <div id="experience" class="site-section">
-            <h2 class="section-heading"><span>.03 </span>EXPERIENCE</h2>
-            <div id="experience-fade" class="section-content-container fade">
-                <div id="experience-content">
-                    <div id="job-selectors">
+                <!-- End #job-selectors -->
+                <div id="job-content">
+                    <div class="job1 jselected">
+                        <h3 class="job-title">Software Engineer</h3>
+                        <p class="job-location"><span class="job-at">@ </span>Sweetwater</p>
+                        <p class="time-range"><br>02/2021 - Present</p>
                         <ul>
-                            <li id="job1" class="job-li jselected">Journey Websites</li>
-                            <li id="job2" class="job-li">Parkview Hospital</li>
-                            <li id="job3" class="job-li">IWU CIS Division</li>
-                            <li id="job4" class="job-li">IT Xpress</li>
-                            <li id="job5" class="job-li">Land<span id="mobile-break">- </span>scaping</li>
+                            <li>Implement feature requests and bug fixes on sweetwater.com and other internal tools</li>
                         </ul>
-                        <script src="./js/jobSelectors.js"></script>
                     </div>
-                    <!-- End #job-selectors -->
-                    <div id="job-content">
-                        <div class="job1 jselected">
-                            <h3 class="job-title">Full Stack Developer Intern</h3>
-                            <p class="job-location"><span class="job-at">@ </span>Journey Websites</p>
-                            <p class="time-range"><br>05/2020 - 08/2020</p>
-                            <ul>
-                                <li>Used JavaScript, PHP, HTML, and CSS to recreate a WordPress web site</li>
-                                <li>Collaborated with a team of developers</li>
-                                <li>Attended client meetings</li>
-                            </ul>
-                        </div>
-                        <div class="job2">
-                            <h3 class="job-title">Non-Clinical Intern</h3>
-                            <p class="job-location"><span class="job-at">@ </span>Parkview Hospital</p>
-                            <p class="time-range"><br>05/2019 - 08/2019</p>
-                            <ul>
-                                <li>Used JavaScript, HTML, and CSS to create a web app to display and edit .pson files</li>
-                                <li>Wrote Visual Basic scripts to make repeated Excel tasks faster and easier</li>
-                            </ul>
-                        </div>
-                        <div class="job3">
-                            <h3 class="job-title">Tutor and Grader</h3>
-                            <p class="job-location"><span class="job-at">@ </span>IWU CIS Division</p>
-                            <p class="time-range"><br>08/2019 - Present</p>
-                            <ul>
-                                <li>Attend weekly tutoring sessions for underclassmen</li>
-                                <li>Grade programming assignments</li>
-                            </ul>
-                        </div>
-                        <div class="job4">
-                            <h3 class="job-title">Student Technician</h3>
-                            <p class="job-location"><span class="job-at">@ </span>IT Xpress</p>
-                            <p class="time-range"><br>01/2018 - Present</p>
-                            <ul>
-                                <li>Help customers with various computer issues</li>
-                                <li>Communicate with customers about their repair</li>
-                                <li>Replace and upgrade computer components</li>
-                            </ul>
-                        </div>
-                        <div class="job5">
-                            <h3 class="job-title">Self-Employed Landscaper</h3>
-                            <p class="job-location"><span class="job-at">@ </span>Heck Bros. Landscaping</p>
-                            <p class="time-range"><br>06/2013 - Present</p>
-                            <ul>
-                                <li>Help customers with a variety of landscaping services</li>
-                            </ul>
-                        </div>
+                    <div class="job2">
+                        <h3 class="job-title">Full Stack Developer Intern</h3>
+                        <p class="job-location"><span class="job-at">@ </span>Journey Websites</p>
+                        <p class="time-range"><br>05/2020 - 08/2020</p>
+                        <ul>
+                            <li>Used JavaScript, PHP, HTML, and CSS to recreate a WordPress web site</li>
+                            <li>Collaborated with a team of developers</li>
+                            <li>Attended client meetings</li>
+                        </ul>
                     </div>
-                    <!-- End #job-content -->
+                    <div class="job3">
+                        <h3 class="job-title">Non-Clinical Intern</h3>
+                        <p class="job-location"><span class="job-at">@ </span>Parkview Hospital</p>
+                        <p class="time-range"><br>05/2019 - 08/2019</p>
+                        <ul>
+                            <li>Used JavaScript, HTML, and CSS to create a web app to display and edit .pson files</li>
+                            <li>Wrote Visual Basic scripts to make repeated Excel tasks faster and easier</li>
+                        </ul>
+                    </div>
+                    <div class="job4">
+                        <h3 class="job-title">Tutor and Grader</h3>
+                        <p class="job-location"><span class="job-at">@ </span>IWU CIS Division</p>
+                        <p class="time-range"><br>08/2019 - Present</p>
+                        <ul>
+                            <li>Attend weekly tutoring sessions for underclassmen</li>
+                            <li>Grade programming assignments</li>
+                        </ul>
+                    </div>
+                    <div class="job5">
+                        <h3 class="job-title">Student Technician</h3>
+                        <p class="job-location"><span class="job-at">@ </span>IT Xpress</p>
+                        <p class="time-range"><br>01/2018 - Present</p>
+                        <ul>
+                            <li>Help customers with various computer issues</li>
+                            <li>Communicate with customers about their repair</li>
+                            <li>Replace and upgrade computer components</li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- End #experience-content -->
+                <!-- End #job-content -->
             </div>
-            <!-- End .section-content-container -->
+            <!-- End #experience-content -->
         </div>
-        <!-- End #experience -->
+        <!-- End .section-content-container -->
+    </div>
+    <!-- End #experience -->
 
-        <div id="education" class="site-section">
-            <h2 class="section-heading"><span>.04 </span>EDUCATION</h2>
-            <div id="education-fade" class="section-content-container fade">
-                <div id="education-selectors">
-                    <ul>
-                        <li id="edu1" class="edu-li eselected">College</li>
-                        <li id="edu2" class="edu-li">High School</li>
-                    </ul>
-                    <script src="./js/eduSelectors.js"></script>
-                </div>
-                <!-- End #education-selectors -->
-                <div id="education-content">
-                    <div id="school-content">
-                        <div class="edu1 eselected">
-                            <h3 class="job-title">Computer Science Major</h3>
-                            <p class="job-location"><span class="job-at">@ </span>Indiana Wesleyan University</p>
-                            <p class="time-range-edu"><br>08/2017 - 05/2021</p>
-                            <p class="gpa">GPA: 3.87 (3.93 in-major)</p><br>
-                            <p id="courses-title">Related Coursework:</p>
-                            <p>Data Structures, Object-Oriented Programming, Calculus, Discrete Mathematics, Systems Analysis and Design, Programming Languages, Operating Systems, Intro to Software Engineering, Computer Network Fundamentals, Database Programming, Internet Programming, Software Testing, Analysis of Algorithms, Advanced Internet Concepts, Senior Project I & II</p>
-                        </div>
-                        <div class="edu2">
-                            <h3 class="job-title">Student</h3>
-                            <p class="job-location"><span class="job-at">@ </span>Leo Jr./Sr. High School</p>
-                            <p class="time-range-edu"><br>08/2013 - 06/2017</p>
-                            <p class="gpa">GPA: 4.0</p><br>
-                            <p>Academic Honors Diploma</p>
-                        </div>
-                    </div>
-                    <!-- End #school-content -->
-                </div>
-                <!-- End #education-content -->
+    <div id="education" class="site-section">
+        <h2 class="section-heading"><span>.04 </span>EDUCATION</h2>
+        <div id="education-fade" class="section-content-container fade">
+            <div id="education-selectors">
+                <ul>
+                    <li id="edu1" class="edu-li eselected">College</li>
+                    <li id="edu2" class="edu-li">High School</li>
+                </ul>
+                <script src="./js/eduSelectors.js"></script>
             </div>
-            <!-- End .section-content-container -->
+            <!-- End #education-selectors -->
+            <div id="education-content">
+                <div id="school-content">
+                    <div class="edu1 eselected">
+                        <h3 class="job-title">Computer Science Major</h3>
+                        <p class="job-location"><span class="job-at">@ </span>Indiana Wesleyan University</p>
+                        <p class="time-range-edu"><br>08/2017 - 05/2021</p>
+                        <p class="gpa">GPA: 3.87 (3.93 in-major)</p><br>
+                        <p id="courses-title">Related Coursework:</p>
+                        <p>Data Structures, Object-Oriented Programming, Calculus, Discrete Mathematics, Systems Analysis and Design, Programming Languages, Operating Systems, Intro to Software Engineering, Computer Network Fundamentals, Database Programming, Internet Programming, Software Testing, Analysis of Algorithms, Advanced Internet Concepts, Senior Project I & II</p>
+                    </div>
+                    <div class="edu2">
+                        <h3 class="job-title">Student</h3>
+                        <p class="job-location"><span class="job-at">@ </span>Leo Jr./Sr. High School</p>
+                        <p class="time-range-edu"><br>08/2013 - 06/2017</p>
+                        <p class="gpa">GPA: 4.0</p><br>
+                        <p>Academic Honors Diploma</p><br>
+                        <p>Top 10 in my class</p>
+                    </div>
+                </div>
+                <!-- End #school-content -->
+            </div>
+            <!-- End #education-content -->
         </div>
-        <!-- End #education -->
+        <!-- End .section-content-container -->
+    </div>
+    <!-- End #education -->
 </body>
 </html>
